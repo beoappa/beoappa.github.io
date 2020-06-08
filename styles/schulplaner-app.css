@@ -1,0 +1,114 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+/* GENERAL STUFF */
+:root {
+    --card: #232323;
+}
+
+body {
+    display: flex;
+
+    width: 80vw;
+    margin: 0 10vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* TITLE STUFF */
+.title-wrapper {
+    display: flex;
+
+    width: 70%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.title {
+    font-size: 48px;
+    text-align: left;
+    line-height: 1.2;
+    color: var(--primary);
+}
+
+.subtitle {
+    font-size: 24px;
+    text-align: left;
+    padding-top: 1em;
+    color: var(--text);
+}
+
+/* IMAGE STUFF */
+.image {
+    height: auto;
+    max-width: 100%;
+    object-fit: scale-down;
+    background-color: transparent;
+}
+
+/* BUTTON STUFF */
+.button-wrapper {
+    display: flex;
+
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.button {
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 20px 3em;
+    min-width: 200px;
+    color: var(--text);
+    padding: 10px 40px;
+    text-align: center;
+    border-radius: 15px;
+    text-decoration: none;
+    box-shadow: none !important;
+    background-color: var(--primary);
+    border: 3px solid var(--primary);
+
+    transition: all 0.1s;
+}
+
+.button:focus,
+.button:hover {
+    border-color: var(--select);
+    background-color: var(--select);
+
+    transition: all 0.1s;
+}
+
+.button-hollow {
+    background-color: transparent !important;
+
+    transition: all 0.1s;
+}
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 1142px) {
+    * {
+        align-items: center;
+    }
+
+    body {
+        margin: 0;
+        width: 100vw;
+        overflow-y: auto;
+        padding-top: 4em;
+        align-items: center;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+}

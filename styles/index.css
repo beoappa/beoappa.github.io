@@ -1,0 +1,116 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
+
+:root {
+    --background-inset: #DEDEDE;
+}
+
+body {
+    display: flex;
+
+    flex-direction: column;
+}
+
+div {
+    background-color: transparent;
+}
+
+a, p {
+    color: var(--text);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.title-wrapper {
+    position: relative;
+    display: flex;
+
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 30px 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-before {
+    font-size: 24px;
+    font-weight: 100;
+    color: var(--text);
+    font-family: "NTR";
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    display: inline;
+
+    font-size: 69px;
+    font-weight: 100;
+    line-height: 115%;
+    color: var(--text);
+    font-family: "NTR";
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.inset-wrapper {
+    position: relative;
+    display: flex;
+
+    min-height: 33vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: inset 0 0 20px #000000;
+    background-color: var(--background-inset);
+}
+
+.subtitle {
+    padding: 50px;
+    font-size: 36px;
+    color: var(--text);
+    text-align: center;
+    background-color: transparent;
+}
+
+.card-wrapper {
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 2em;
+    width: 300px;
+    outline: none;
+    padding: 0.2em;
+    color: #FFFFFF;
+    min-height: 100px;
+    text-align: center;
+    border-radius: 15px;
+    border: 5px solid var(--primary);
+    background-color: var(--primary);
+    box-shadow: 0 0 10px var(--primary), inset 0 0 10px var(--primary);
+
+    transition: all	0.2s;
+}
+
+.card-title {
+    font-size: 24px;
+    padding: 15px;
+}
+
+.card-description {
+    padding: 10px 0;
+}
+
+/* DARKMODE IF SET BY SYSTEM */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-inset: #151515;
+    }
+}

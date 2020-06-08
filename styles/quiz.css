@@ -1,0 +1,173 @@
+/* GENERAL STUFF */
+:root {
+    --right: #2ed573;
+    --wrong: #ff4757;
+}
+
+.overlay {
+    position: absolute;
+    display: none;
+
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+}
+
+/* BUTTONS AND WRAPPERS */
+.progress, .action-button {
+    position: relative;
+
+    width: 98%;
+    height: 10px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    margin: 1.5vh 2vw;
+    text-align: center;
+    border-radius: 1em;
+    background-color: var(--disabled);
+    box-shadow: 0 0 10px 0 var(--disabled);
+}
+
+.progress::after {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 0;
+    content: "";
+    height: 10px;
+    border-radius: 1em;
+    background-color: var(--primary);
+
+    transition: all 0.5s ease-in-out;
+}
+
+.action-button {
+    height: 2em;
+    font-size: 18px;
+    background-image: none;
+    background-color: var(--primary);
+    box-shadow: 0 0 10px 0 var(--primary);
+
+    transition: all 0.1s;
+}
+
+.action-button:focus, .action-button:hover {
+    outline: none;
+    cursor: pointer;
+    background-color: var(--select);
+    box-shadow: 0 0 10px 0 var(--select);
+
+    transition: all 0.1s;
+}
+
+.quiz {
+    display: flex;
+
+    width: 98vw;
+    height: 96vh;
+    padding: 2vh 1vw;
+    flex-direction: row;
+}
+
+.verb-wrapper, .guess-wrapper {
+    display: flex;
+
+    width: 50vw;
+    padding: 1vh;
+    color: var(--text);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.verb-wrapper {
+    justify-content: space-between;
+}
+
+.verb, .result {
+    font-size: 36px;
+    text-align: center;
+}
+
+.result {
+    display: none;
+}
+
+.guess-button {
+    width: 98%;
+    height: 23%;
+    border: none;
+    outline: none;
+    font-size: 36px;
+    color: #ffffff;
+    margin: 1.5vh 2vw;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--primary);
+    box-shadow: 0 0 10px 0 var(--primary);
+
+    transition: all 0.1s;
+}
+
+.guess-button:focus, .guess-button:hover {
+    outline: none;
+    cursor: pointer;
+    background-color: var(--select);
+    box-shadow: 0 0 10px 0 var(--select);
+
+    transition: all 0.1s;
+}
+
+.guess-button::-moz-focus-inner {
+    border: 0;
+}
+
+/* MODIFIERS */
+.right {
+    background-color: var(--right) !important;
+    box-shadow: 0 0 10px 0 var(--right) !important;
+}
+
+.wrong {
+    background-color: var(--wrong) !important;
+    box-shadow: 0 0 10px 0 var(--wrong) !important;
+}
+
+*:disabled {
+    cursor: not-allowed;
+    background-color: var(--disabled) !important;
+    box-shadow: 0 0 10px 0 var(--disabled) !important;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+    .quiz {
+        width: 96vw;
+        height: 98vh;
+        padding: 1vh 2vw;
+        flex-direction: column;
+    }
+
+    .verb-wrapper, .guess-wrapper {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .guess-wrapper {
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .guess-button {
+        font-size: 24px;
+        width: calc(50% - 4vw);
+        height: calc(50% - 3vh);
+    }
+}

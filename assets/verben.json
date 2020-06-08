@@ -1,0 +1,33 @@
+{
+    "suffixes": {
+        "1": {
+            "ます": "nicht-vergangenheit"
+        },
+        "2": {
+            "ません": "negierte nicht-vergangenheit"
+        },
+        "3": {
+            "ました": "vergangenheit"
+        },
+        "4": {
+            "ませんでした": "negierte vergangenheit"
+        }
+    },
+    "lessons": {
+        "2": {
+            "し": "tun",
+            "たべ": "essen",
+            "のみ": "trinken",
+            "かき": "schreiben",
+            "よみ": "lesen",
+            "かい": "kaufen"
+        },
+        "3": {
+            "き": "herkommen, sich her bewegen",
+            "すんでい": "wohnen",
+            "いき": "hingehen, sich hinbewegen",
+            "わかり": "verstehen, begreifen, wissen",
+            "かえり": "zurückkehren"
+        }
+    }
+}
